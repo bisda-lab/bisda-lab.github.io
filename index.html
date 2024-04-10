@@ -20,7 +20,6 @@
       position: relative;
       display: flex; /* 添加弹性布局 */
       align-items: center; /* 垂直居中 */
-      cursor: pointer; /* 添加指针样式 */
     }
 
     header h1 {
@@ -113,26 +112,13 @@
   </style>
   <!-- 添加浏览器标签logo -->
   <link rel="icon" type="image/png" href="浏览器标签logo.png">
-  <script>
-    // JavaScript代码
-    window.onload = function() {
-      // 获取标题元素
-      var title = document.getElementById('title');
-
-      // 给标题元素添加点击事件
-      title.onclick = function() {
-        // 回到主页
-        window.location.href = 'index.html';
-      };
-    };
-  </script>
 </head>
 <body>
   <header>
     <div class="logo">
       <img src="实验室logo.png" alt="实验室logo">
     </div>
-    <div id="title">
+    <div>
       <h1>仿生智能结构设计及应用实验室</h1>
       <p>Bionic Intelligent Structure Design and Application Lab</p>
     </div>
@@ -140,45 +126,37 @@
 
   <nav>
     <ul>
+      <li><a href="https://bisda-lab.github.io/index.html">首页</a></li>
       <li><a href="#about">关于我们</a></li>
       <li><a href="#research">研究方向</a></li>
       <li><a href="#publications">科研成果</a></li>
       <li><a href="#news">学术动态</a></li>
-      <li><a href="#team">团队成员</</a></li>
+      <li><a href="#team">团队成员</a></li>
       <li><a href="#contact">联系我们</a></li>
     </ul>
   </nav>
 
   <main>
-    <section id="about">
-      <h2>关于我们</h2>
-      <p>这是关于我们的内容...</p>
-    </section>
+    <div class="slider">
+      <div class="slides">
+        <div class="slide">
+          <img src="令希图书馆.jpg" alt="Slide 1">
+        </div>
+        <div class="slide">
+          <img src="伟人雕像.jpg" alt="Slide 2">
+        </div>
+        <div class="slide">
+          <img src="正门.jpg" alt="Slide 3">
+        </div>
+      </div>
+    </div>
 
-    <section id="research">
-      <h2>研究方向</h2>
-      <p>这是研究方向的内容...</p>
-    </section>
+    <h2 id="about">实验室简介</h2>
+    <p>实验室主要研究方向为多孔智能微结构仿生优化设计及增材制造，机器学习数值预测模型开发，基于图像的数值建模与分析，材料本构关系，航天力学，工程结构强度分析等方面的研究。</p>
+    <p>欢迎具有力学、机械、生物医学工程等专业背景的优秀学生报考硕士或博士研究生，有意向者请发送电子邮件进行详细咨询。</p>
 
-    <section id="publications">
-      <h2>科研成果</h2>
-      <p>这是科研成果的内容...</p>
-    </section>
+    <!-- 其他内容 -->
 
-    <section id="news">
-      <h2>学术动态</h2>
-      <p>这是学术动态的内容...</p>
-    </section>
-
-    <section id="team">
-      <h2>团队成员</h2>
-      <p>这是团队成员的内容...</p>
-    </section>
-
-    <section id="contact">
-      <h2>联系我们</h2>
-      <p>这是联系我们的内容...</p>
-    </section>
   </main>
 </body>
 </html>
