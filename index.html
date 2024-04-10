@@ -62,8 +62,8 @@
     }
 
     .slider {
-      width: 100%;
-      height: auto;
+      width: 800px; /* 调整为适当的宽度 */
+      height: 400px; /* 调整为适当的高度 */
       margin: 0 auto;
       overflow: hidden;
       position: relative;
@@ -71,7 +71,7 @@
 
     .slider img {
       width: 100%;
-      height: auto;
+      height: 100%;
       object-fit: cover;
     }
 
@@ -118,7 +118,7 @@
       </div>
     </div>
 
-    <h2 id="about">实验室简介</h2>
+    <h2 id="about">Introduction</h2>
     <p>实验室主要研究方向为多孔智能微结构仿生优化设计及增材制造，机器学习数值预测模型开发，基于图像的数值建模与分析，材料本构关系，航天航天力学，工程结构强度分析等方面的研究。</p>
     <p>欢迎具有力学、机械、生物医学工程等专业背景的优秀学子报考硕士或博士研究生，有意向者请邮件详细。</p>
 
@@ -128,17 +128,4 @@
 
   <script>
     // JavaScript 代码
-    const slider = document.querySelector('.slider');
-    const slides = slider.querySelector('.slides');
-    const slideCount = slider.querySelectorAll('.slide').length;
-    let currentIndex = 0;
-
-    function nextSlide() {
-      currentIndex = (currentIndex + 1) % slideCount;
-      slides.style.transform = `translateX(-${currentIndex * 100}%)`;
-    }
-
-    setInterval(nextSlide, 3000);
-  </script>
-</body>
-</html>
+    const slides = document.querySelector('.slides');
