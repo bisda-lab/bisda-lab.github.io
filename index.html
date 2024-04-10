@@ -16,29 +16,31 @@
       background-color: #003d7d;
       color: #fff;
       padding: 20px;
-      text-align: center;
-      position: relative; /* 添加相对定位 */
+      text-align: left; /* 修改为左对齐 */
+      position: relative;
+      display: flex; /* 添加弹性布局 */
+      align-items: center; /* 垂直居中 */
     }
 
     header h1 {
-      font-family: "楷体", serif; /* 修改字体为楷体 */
-      font-size: 24px;
-      margin-top: 10px;
-      margin-bottom: 0;
-      font-weight: bold; /* 添加字体加粗 */
+      font-family: "楷体", serif;
+      font-size: 48px; /* 增大字体大小 */
+      margin: 0;
+      font-weight: bold;
+      margin-left: 20px; /* 标题与logo之间的间距 */
     }
 
     header p {
       font-family: "Times New Roman", serif;
-      font-size: 16px;
-      margin-top: 10px;
+      font-size: 24px; /* 增大字体大小 */
+      margin: 0;
+      margin-left: 20px; /* 标题与logo之间的间距 */
     }
 
-    .logo {
-      position: absolute; /* 添加绝对定位 */
-      left: 20px; /* 调整logo的位置 */
-      top: 50%;
-      transform: translateY(-50%);
+    .logo img {
+      width: 80px; /* 调整logo的宽度 */
+      height: 80px; /* 调整logo的高度 */
+      margin-right: 20px; /* logo与标题之间的间距 */
     }
 
     nav {
@@ -70,8 +72,8 @@
     }
 
     .slider {
-      width: 800px; /* 调整为适当的宽度 */
-      height: 600px; /* 调整为适当的高度 */
+      width: 800px;
+      height: 600px;
       margin: 0 auto;
       overflow: hidden;
       position: relative;
@@ -100,8 +102,10 @@
     <div class="logo">
       <img src="实验室logo.png" alt="实验室logo">
     </div>
-    <h1>仿生智能结构设计及应用实验室</h1>
-    <p>Bionic Intelligent Structure Design and Application Lab</p>
+    <div>
+      <h1>仿生智能结构设计及应用实验室</h1>
+      <p>Bionic Intelligent Structure Design and Application Lab</p>
+    </div>
   </header>
 
   <nav>
