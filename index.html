@@ -10,44 +10,55 @@
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
+      background-color: #f2f2f2;
     }
 
     header {
-      background-color: #333;
+      background-color: #003d7d;
       color: #fff;
       padding: 20px;
       text-align: center;
     }
 
     nav {
-      background-color: #555;
-      color: #fff;
+      background-color: #fff;
       padding: 10px;
       text-align: center;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px;
     }
 
     nav a {
-      color: #fff;
+      color: #003d7d;
       text-decoration: none;
       margin: 0 10px;
+      font-size: 18px;
+      font-weight: bold;
     }
 
     main {
       padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     }
 
     footer {
-      background-color: #333;
+      background-color: #003d7d;
       color: #fff;
       padding: 20px;
       text-align: center;
+      margin-top: 20px;
+    }
+
+    h1, h2, h3 {
+      color: #003d7d;
     }
   </style>
 </head>
 <body>
   <header>
     <h1>仿生智能结构设计及应用实验室</h1>
-    <p style="font-size: 16px;">Bionic Intelligent Structure Design and Application Lab</p>
+    <p style="font-size: 18px;">Bionic Intelligent Structure Design and Application Lab</p>
   </header>
 
   <nav>
@@ -57,15 +68,6 @@
     <a href="#">实验设备</a>
     <a href="#">团队成员</a>
     <a href="#">联系我们</a>
-    <select onchange="window.location.href=this.value;">
-      <option value="#" selected>导航菜单</option>
-      <option value="#">首页</option>
-      <option value="#">关于我们</option>
-      <option value="#">研究方向</option>
-      <option value="#">实验设备</option>
-      <option value="#">团队成员</option>
-      <option value="#">联系我们</option>
-    </select>
   </nav>
 
   <main>
