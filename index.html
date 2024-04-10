@@ -10,7 +10,6 @@
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #f2f2f2;
     }
 
     header {
@@ -20,80 +19,74 @@
       text-align: center;
     }
 
-    nav {
-      background-color: #fff;
-      padding: 10px;
-      text-align: center;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      margin-bottom: 20px;
-    }
-
-    nav a {
-      color: #003d7d;
-      text-decoration: none;
-      margin: 0 10px;
-      font-size: 18px;
-      font-weight: bold;
-    }
-
     main {
       padding: 20px;
-      background-color: #fff;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    }
-
-    footer {
-      background-color: #003d7d;
-      color: #fff;
-      padding: 20px;
       text-align: center;
-      margin-top: 20px;
     }
 
-    h1, h2, h3 {
-      color: #003d7d;
+    .slider {
+      width: 80%;
+      height: 400px;
+      margin: 0 auto;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .slider img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .slider .slides {
+      display: flex;
+      transition: all 0.5s ease-in-out;
+    }
+
+    .slider .slide {
+      flex: 0 0 100%;
     }
   </style>
 </head>
 <body>
   <header>
     <h1>仿生智能结构设计及应用实验室</h1>
-    <p style="font-size: 18px;">Bionic Intelligent Structure Design and Application Lab</p>
+    <p style="font-size: 16px;">Bionic Intelligent Structure Design and Application Lab</p>
   </header>
 
-  <nav>
-    <a href="#">首页</a>
-    <a href="#">关于我们</a>
-    <a href="#">研究方向</a>
-    <a href="#">实验设备</a>
-    <a href="#">团队成员</a>
-    <a href="#">联系我们</a>
-  </nav>
-
   <main>
-    <h2>欢迎来到仿生智能结构设计及应用实验室</h2>
-    <h3>小标题</h3>
-    <p>我们是一支致力于科学研究的团队，专注于以下研究方向：</p>
-    <ul>
-      <li>研究方向一</li>
-      <li>研究方向二</li>
-      <li>研究方向三</li>
-    </ul>
+    <h2>实验室简介</h2>
+    <p>我们是一支致力于科学研究的团队，专注于仿生智能结构设计及应用的领域。</p>
+    <p>我们的目标是推动科学研究的发展，探索新的智能结构设计方法，并将其应用于各个领域，如建筑、航空航天和机器人技术。</p>
 
-    <h3>实验设备</h3>
-    <p>我们实验室拥有先进的实验设备，用于支持我们的科研工作。</p>
-
-    <h3>团队成员</h3>
-    <p>我们拥有一支由优秀的科研人员组成的团队，致力于推动科学研究的发展。</p>
-
-    <h3>联系我们</h3>
-    <p>如果您对我们的研究工作感兴趣或有任何疑问，请随时联系我们。</p>
-    <p>Email: <a href="mailto:yongtaolu@dlut.edu.cn">yongtaolu@dlut.edu.cn</a></p>
-    <p>电话: 123-456-7890</p>
+    <div class="slider">
+      <div class="slides">
+        <div class="slide">
+          <img src="image1.jpg" alt="Slide 1">
+        </div>
+        <div class="slide">
+          <img src="image2.jpg" alt="Slide 2">
+        </div>
+        <div class="slide">
+          <img src="image3.jpg" alt="Slide 3">
+        </div>
+      </div>
+    </div>
   </main>
 
-  <footer>
-    &copy; 2024 仿生智能结构设计及应用实验室. All rights reserved.
-  </footer>
+  <script>
+    // JavaScript 代码
+    const slider = document.querySelector('.slider');
+    const slides = slider.querySelector('.slides');
+    const slideCount = slider.querySelectorAll('.slide').length;
+    let currentIndex = 0;
+
+    function nextSlide() {
+      currentIndex = (currentIndex + 1) % slideCount;
+      slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+    }
+
+    setInterval(nextSlide, 3000);
+  </script>
 </body>
 </html>
